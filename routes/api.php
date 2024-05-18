@@ -15,3 +15,6 @@ Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])
 Route::post('/shortlink', [\App\Http\Controllers\ShortLinkController::class, 'store'])
     ->middleware('auth:sanctum')
     ->name('shortlink');
+
+Route::post('/static', [\App\Http\Controllers\ShortLinkController::class, 'static'])
+    ->name('static');

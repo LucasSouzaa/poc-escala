@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ShortLinkController extends Controller
 {
+
+    public function static()
+    {
+        return response("ok", 200);
+    }
     public function show($url)
     {
         $shortlink = Shortlink::where('name', $url)->firstOrFail();
