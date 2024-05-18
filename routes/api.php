@@ -16,5 +16,5 @@ Route::post('/shortlink', [\App\Http\Controllers\ShortLinkController::class, 'st
     ->middleware('auth:sanctum')
     ->name('shortlink');
 
-Route::post('/static', [\App\Http\Controllers\ShortLinkController::class, 'static'])
+Route::get('/static', [\App\Http\Controllers\ShortLinkController::class, 'static'])
     ->name('static');
